@@ -1,7 +1,8 @@
 ---
 title: "Poznajemy Chile"
 author: "Juan Álvarez-Szczepański / Jose Álvarez-Szczepański"
-date: '`r Sys.Date()`'
+#date: '`r Sys.Date()`'
+date: '08-12-2022'
 output:
   xaringan::moon_reader:
     lib_dir: libs
