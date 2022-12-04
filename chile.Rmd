@@ -1,0 +1,338 @@
+---
+title: "Poznajemy Chile"
+author: "Juan Álvarez-Szczepański / Jose Álvarez-Szczepański"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    css: [xaringan-themer.css, other.css]
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE) #, knitr.table.format = 'latex')
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+# options(width=45)
+#options(width = 90)
+options(width = 70)
+knitr::opts_chunk$set(fig.pos = 'H')
+
+# Making some aesthetic changes for this document
+theme_set(theme_gray(base_size = 9))
+update_geom_defaults("point", list(size = 0.5))
+update_geom_defaults("boxplot", list(outlier.size = 0.5))
+```
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+# solarized_dark(
+#   code_font_family = "Fira Code",
+#   code_font_url    = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
+# )
+style_mono_accent(
+  base_color = "#DA291C",
+  #base_color = "#e69e33",
+  header_font_google = google_font("Muli"),
+  text_font_google   = google_font("Muli", "300", "300i"),
+  code_font_google   = google_font("Droid Mono")
+)
+```
+class: inverse, center, middle
+# Gdzie jest Chile?
+
+---
+background-image: url("img/mapa1.jpg")
+background-size: contain
+```{r, echo = F}
+#knitr::include_graphics("img/pca-lda2.png")
+```
+
+
+---
+background-image: url("img/mapa2.jpg")
+background-size: contain
+
+---
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble(pen_size = 20, eraser_size = 20)
+```
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "img/logo2.png",
+  exclude_class = NULL
+)
+```
+
+.pull-left[
+# Chile położone jest w Ameryce Południowej
+]
+.pull-right[
+```{r, echo = F, out.width = "90%"}
+knitr::include_graphics("img/SA.jpg")
+```
+]
+
+---
+# Flaga Chile
+```{r, echo = F, out.width = "70%"}
+knitr::include_graphics("img/chilebn.jpg")
+```
+
+---
+# Flaga Chile
+```{r, echo = F, out.width = "70%"}
+knitr::include_graphics("img/chilecol.jpg")
+```
+
+---
+# Kto ma więcej mieszkańców?
+
+.pull-left[
+```{r, echo = F, out.width = "90%"}
+knitr::include_graphics("img/chl.svg")
+```
+]
+.pull-right[
+```{r, echo = F, out.width = "90%"}
+knitr::include_graphics("img/pol.svg")
+```
+]
+
+---
+.pull-left[
+# 18 307 925
+```{r, echo = F, out.width = "90%"}
+knitr::include_graphics("img/chl.svg")
+```
+]
+.pull-right[
+# 38 179 800
+```{r, echo = F, out.width = "90%"}
+knitr::include_graphics("img/pol.svg")
+```
+]
+
+---
+# W jakim języku mówią Chilijczycy?
+
+--
+
+## Po hiszpańsku!
+
+```{r, echo = F, out.width = "60%"}
+knitr::include_graphics("img/spanish.jpg")
+```
+
+---
+.pull-left[
+# Jak dostać się do Chile?
+
+[Samolotem!](https://www.flightradar24.com/data/flights/af406#2c3bf8d8)
+
+*Podróż: Suchy Las- Berlin-Paryż-Santiago-Curico*
+
+*Podróż zajęła 28 godzin =1 dzień i 4 godziny*
+]
+.pull-right[
+<br><br><br>
+```{r, echo = F, out.width = "100%"}
+knitr::include_graphics("img/flight.png")
+```
+]
+
+---
+# Jak dostać się do Chile?
+
+.pull-left[
+```{r, echo = F, out.width = "90%"}
+knitr::include_graphics("img/avion1.png")
+```
+]
+.pull-right[
+```{r, echo = F, out.width = "90%"}
+knitr::include_graphics("img/avion2.png")
+```
+]
+
+---
+# Jak dostać się do Chile?
+
+```{r, echo = F, out.width = "80%"}
+knitr::include_graphics("img/avion3.png")
+```
+
+---
+# Jak dostać się do Chile?
+
+```{r, echo = F, out.width = "40%"}
+knitr::include_graphics("img/avion4.png")
+```
+
+---
+# Czy wiedziałeś?
+
+.pull-left[
+```{r, echo = F, out.width = "100%"}
+knitr::include_graphics("img/hojas.jpg")
+```
+]
+
+.pull-right[
+## Kiedy w Polsce jest wiosna w Chile jest JESIEŃ
+
+## Kiedy w Polsce jest lato w Chile jest ...
+]
+
+---
+# Czy wiedziałeś?
+
+.pull-left[
+```{r, echo = F, out.width = "100%"}
+knitr::include_graphics("img/zegar.png")
+```
+]
+
+.pull-right[
+
+### Jak w Polsce jest lato to różnica w czasie między Polską a Chile wynosi 6 godzin.
+
+Jak w Polsce jest 12:00 w południe to w Chile jest 6:00 rano tego samego dnia.
+
+### Jak w Polsce jest zima to różnica w czasie między Polską a Chile wynosi 4 godziny.
+
+Jak w Polsce jest 12:00 w południe to w Chile jest 8:00 rano tego samego dnia
+
+
+]
+
+---
+class: inverse, center, middle
+# Jak wygląda Chile?
+
+---
+# Santiago
+
+```{r, echo = F, out.width = "90%"}
+knitr::include_graphics("img/santiago.jpg")
+```
+
+---
+# Pustynia Atacama
+
+.pull-left[
+```{r, echo = F, out.width = "70%"}
+knitr::include_graphics("img/des1.png")
+```
+]
+
+.pull-right[
+```{r, echo = F, out.width = "100%"}
+knitr::include_graphics("img/des2.png")
+```
+Atacama to najbardziej suche miejsce na świecie!
+]
+
+---
+# Ocean Spokojny
+
+<video width="800" controls autoplay>
+<source src="img/mar.mp4" type="video/mp4">
+</video>
+
+---
+# Andy
+
+```{r, echo = F, out.width = "80%"}
+knitr::include_graphics("img/andes1.jpg")
+```
+
+---
+# Wulkany
+
+.pull-left[
+```{r, echo = F, out.width = "80%"}
+knitr::include_graphics("img/wul.jpg")
+```
+]
+.pull-right[
+## W Chile znajduje się 2000 wulkanów, z których ponad 500 według ekspertów jest potencjalnie aktywnych.
+]
+
+---
+# Huilo Huilo
+
+.pull-left[
+```{r, echo = F, out.width = "70%"}
+knitr::include_graphics("img/hh1.jpg")
+```
+]
+
+.pull-right[
+```{r, echo = F, out.width = "100%"}
+knitr::include_graphics("img/hh2.jpg")
+```
+]
+
+---
+# Wyspa Wielkanocna
+
+```{r, echo = F, out.width = "80%"}
+knitr::include_graphics("img/pascia.jpg")
+```
+
+---
+# Antarktyka Chilijska
+
+```{r, echo = F, out.width = "90%"}
+knitr::include_graphics("img/ant.jpg")
+```
+
+
+---
+class: inverse, center, middle
+# Tradycje
+
+---
+# Cueca
+
+<iframe width="950" height="500" src="https://www.youtube.com/embed/6062aKDLduI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+# Chinchineros
+
+<iframe width="950" height="500" src="https://www.youtube.com/embed/wOiXkEzcY-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+# Empanadas
+
+```{r, echo = F, out.width = "80%"}
+knitr::include_graphics("img/emp.jpg")
+```
+
+---
+# Volantines
+
+```{r, echo = F, out.width = "80%"}
+knitr::include_graphics("img/vol.jpg")
+```
+
+---
+# Emboque
+
+```{r, echo = F, out.width = "60%"}
+knitr::include_graphics("img/emb.jpg")
+```
+
+---
+class: inverse, center, middle
+# Pozdrowienia!
+# Saludos!
+```{r, echo = F, out.width = "40%"}
+knitr::include_graphics("img/curico.png")
+```
